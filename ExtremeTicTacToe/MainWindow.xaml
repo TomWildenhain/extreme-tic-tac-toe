@@ -1,0 +1,20 @@
+﻿<Window x:Class="ExtremeTicTacToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="328" Width="670" SizeChanged="Window_SizeChanged" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Border Name="sizingBorder">
+            <Grid Name="extremeBoardHolder" Grid.Row="0" Width="250" Height="250">
+                <!--Gets filled by C#-->
+            </Grid>
+        </Border>
+        <Button Grid.Row="1" FontSize="30" FontWeight="Bold" Name="playBN" Click="playBN_Click">PLAY</Button>
+        <Button Grid.Row="1" FontSize="30" Name="randomBN" Click="randomBN_Click" Visibility="Collapsed">Random</Button>
+        <Button Grid.Row="2" FontSize="30" Name="resetBN" Click="resetBN_Click">Reset</Button>
+    </Grid>
+</Window>
